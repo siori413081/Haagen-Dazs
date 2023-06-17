@@ -3,12 +3,12 @@
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/header.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/spOpenMenu.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/hero.css');
+@import url('https://siori413081.github.io/portfolio3/assets/css/modules/notice.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/topics.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/product.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/contents.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/gallery.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/recipe.css');
-@import url('https://siori413081.github.io/portfolio3/assets/css/modules/support.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/footer.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/jQuery.css');
 
@@ -17,12 +17,12 @@
 @import url('./modules/header.css');
 @import url('./modules/spOpenMenu.css');
 @import url('./modules/hero.css');
+@import url('./modules/notice.css');
 @import url('./modules/topics.css');
 @import url('./modules/product.css');
 @import url('./modules/contents.css');
 @import url('./modules/gallery.css');
 @import url('./modules/recipe.css');
-@import url('./modules/support.css');
 @import url('./modules/footer.css');
 @import url('./modules/jQuery.css');
 */

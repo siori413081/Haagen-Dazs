@@ -4,9 +4,43 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.header-inner{
+    padding: 40px 30px;
+}
+
+.header-nav-list{
+    display: flex;
+}
+
+.header-nav-list-item{
+    margin-left: 20px;
+}
+
+.header-nav-list-item:first-child{
+    margin-left: 0;
+}
+
+.header-nav-list-item p{
+    color: black;
+    font-size: .9rem;
+    font-weight: 900;
+}
+
+.header-nav-list-item p:hover{
+    color: #600624;
+}
+
+.header-nav-list-item a{
+    cursor: pointer;
+}
+
 }
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+.header-nav{
+    display: none;
+}
 
 }
