@@ -2,6 +2,7 @@
 $('.footer-sp-menuItem').click(function() {
 	$(this).next('.accordion-box').slideToggle('active');
     $(this).children('.footer-plusIcon').toggleClass('active');
+    $(this).children('.footer-sp-menuTitle').children('p').toggleClass('active');
 });
 
 //notice
@@ -22,4 +23,13 @@ $('.recipe-title-text').hover(function() {
 //gallery
 $('.gallery-title-text').hover(function() {
 	$(this).children('.gallery-arrow-right').toggleClass('hover');
+});
+
+//ハンバーガーメニュー
+$('.header-hamburgerMenu-btn').hover(function() {
+	$(this).toggleClass('hover');
+});
+
+$('.header-hamburgerMenu-btn').click(function() {
+	$(this).toggleClass('active');
 });
