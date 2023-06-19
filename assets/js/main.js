@@ -32,4 +32,10 @@ $('.header-hamburgerMenu-btn').hover(function() {
 
 $('.header-hamburgerMenu-btn').click(function() {
 	$(this).toggleClass('active');
+	$('.hamburgerMenu').toggleClass('active');
+});
+
+//ハンバーガー中身
+$('.hamburgerMenu-contents-title-link').hover(function() {
+	$(this).children('.hamburgerMenu-arrow-right').toggleClass('hover');
 });

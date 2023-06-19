@@ -1,7 +1,7 @@
 
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/common.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/header.css');
-@import url('https://siori413081.github.io/portfolio3/assets/css/modules/spOpenMenu.css');
+@import url('https://siori413081.github.io/portfolio3/assets/css/modules/hamburgerMenu.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/hero.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/notice.css');
 @import url('https://siori413081.github.io/portfolio3/assets/css/modules/topics.css');
@@ -15,7 +15,7 @@
 /*
 @import url('./modules/common.css');
 @import url('./modules/header.css');
-@import url('./modules/spOpenMenu.css');
+@import url('./modules/hamburgerMenu.css');
 @import url('./modules/hero.css');
 @import url('./modules/notice.css');
 @import url('./modules/topics.css');
