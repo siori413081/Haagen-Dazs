@@ -33,9 +33,42 @@ $('.header-hamburgerMenu-btn').hover(function() {
 $('.header-hamburgerMenu-btn').click(function() {
 	$(this).toggleClass('active');
 	$('.hamburgerMenu').toggleClass('active');
+	$('body').toggleClass('active');
 });
 
 //ハンバーガー中身
 $('.hamburgerMenu-contents-title-link').hover(function() {
 	$(this).children('.hamburgerMenu-arrow-right').toggleClass('hover');
+});
+
+$('.hamburger-contents-box-item').hover(function() {
+	$(this).children('a').children('p').toggleClass('hover');
+});
+
+$('.hamburgerMenu-guide-icon').hover(function() {
+	$(this).children('p').toggleClass('hover');
+});
+
+//コンテンツ
+$('.contents-text-view').hover(function() {
+	$(this).children().toggleClass('hover');
+});
+
+//ギャラリー
+$('.gallery-title-text-pc').hover(function() {
+	$(this).children().toggleClass('hover');
+});
+
+//レシピ
+$('.recipe-title-text-pc').hover(function() {
+	$(this).children().toggleClass('hover');
+});
+
+//フッター
+$('.footer-main-pc ul li p').hover(function() {
+	$(this).children('a').toggleClass('hover');
+});
+
+$('.footer-guide-icon').hover(function() {
+	$(this).children('p').toggleClass('hover');
 });

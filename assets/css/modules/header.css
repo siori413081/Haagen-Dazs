@@ -149,6 +149,7 @@
 .header-inner{
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -168,6 +169,11 @@
     height: 100%;
 }
 
+.header-menu-right{
+    position: absolute;
+    right: 20px;
+}
+
 .header-hamburgerMenu-btn{
     position: relative;
     width: 50px;
@@ -176,6 +182,7 @@
     background-color: #000;
     cursor: pointer;
     transform: scale(1,1);
+    z-index: 999;
 }
 
 .header-hamburgerMenu-btn span{
@@ -200,11 +207,6 @@
 .header-hamburgerMenu-btn span:nth-of-type(3){
     top: 32px;
     width: 30%;
-}
-
-.header-hamburgerMenu-btn.hover{
-    background-color: #600624;
-    transform: scale(1.3,1.3);
 }
 
 .header-hamburgerMenu-btn.active span:nth-of-type(1) {

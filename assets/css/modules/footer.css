@@ -37,6 +37,10 @@
     cursor: pointer;
 }
 
+.footer-main-pc ul li p a.hover{
+    color: #600624;
+}
+
 .footer-sub-wrap{
     display: flex;
     justify-content: space-between;
@@ -76,6 +80,10 @@
 
 .footer-sub-guide p{
     margin-left: 10px;
+}
+
+.footer-sub-guide p.hover{
+    color: #600624;
 }
 
 .footer-guide-icon{

@@ -8,6 +8,11 @@ body{
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
 }
 
+body.active{
+    height: 100%;
+    overflow: hidden;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -15,6 +20,11 @@ body{
 
 body{
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
+}
+
+body.active{
+    height: 100%;
+    overflow: hidden;
 }
 
 }
