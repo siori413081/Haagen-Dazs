@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 769px) {
+    /* PC style */
+
+.searchMenu{
+    position: fixed;
+    top: -200%;
+    width: 100%;
+    padding: 50px 50px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #efefef;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.searchMenu-close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.searchMenu.active{
+    top: 0;
+}
+
+.searchMenu-form{
+    position: relative;
+    display: flex;
+}
+
+.searchMenu-input{
+    width: 100%;
+    background-color: #ebebeb;
+    border: 0;
+    border-radius: 5px;
+    margin: 30px 0;
+    padding: 20px 10px;
+}
+
+.searchMenu-icon{
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: translate(-50%,-50%);
+}
+
+.searchMenu-title{
+    color: #600624;
+    font-size: .8rem;
+    font-weight: 900;
+}
+
+.searchMenu-word p:first-child{
+    color: #600624;
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.searchMenu p{
+    color: #000;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+    /* SP style */
+
+.searchMenu{
+    position: fixed;
+    top: -200%;
+    width: 100%;
+    padding: 50px 50px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #efefef;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.searchMenu-close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.searchMenu.active{
+    top: 0;
+}
+
+.searchMenu-form{
+    position: relative;
+    display: flex;
+}
+
+.searchMenu-input{
+    width: 100%;
+    background-color: #ebebeb;
+    border: 0;
+    border-radius: 5px;
+    margin: 30px 0;
+    padding: 20px 10px;
+}
+
+.searchMenu-icon{
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: translate(-50%,-50%);
+}
+
+.searchMenu-title{
+    color: #600624;
+    font-size: .8rem;
+    font-weight: 900;
+}
+
+.searchMenu-word p:first-child{
+    color: #600624;
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.searchMenu p{
+    color: #000;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+}
