@@ -180,18 +180,18 @@
 
 /*ドットナビゲーションの設定*/
 
-.slick-dots {
+.product-slide-dots {
     display: flex;
     justify-content: center;
     align-items: center;
 	margin-top: 60px;
 }
 
-.slick-dots li {
+.product-slide-dots li {
     display:inline-block;
 }
 
-.slick-dots button {
+.product-slide-dots button {
     color: transparent;
     outline: none;
     width:50px;
@@ -201,7 +201,7 @@
     border: 0;
 }
 
-.slick-dots .slick-active button{
+.product-slide-dots .slick-active button{
     background:#000;/*ドットボタンの現在地表示の色*/
     border-radius: 10px;
     border: 2px solid #000;
