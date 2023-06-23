@@ -378,6 +378,14 @@
     align-items: center;
 }
 
+.hamburgerMenu-guide-icon:first-child{
+    margin-bottom: 10px;
+}
+
+.hamburgerMenu-guide-icon:last-child{
+    margin-bottom: 0;
+}
+
 .hamburgerMenu-guide-icon p{
     color: #000;
     font-size: .7rem;

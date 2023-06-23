@@ -27,15 +27,22 @@
 
 .searchMenu-inner{
     height: 40%;
-    padding: 50px 80px 50px;
+    padding: 50px 200px 50px;
     background-color: #fff;
     border-bottom: 1px solid #efefef;
     box-sizing: border-box;
 }
 
+.searchMenu-inner-top{
+    display: flex;
+    align-items: center;
+}
+
 .searchMenu-form{
     position: relative;
     display: flex;
+    width: 100%;
+    margin-left: 20px;
 }
 
 .searchMenu-input{
