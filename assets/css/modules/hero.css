@@ -5,7 +5,11 @@
     /* PC style */
 
 .hero{
-    margin-top: 80px;
+    height: 100vh;
+}
+
+.hero-slider{
+    padding: 200px 0 100px;
 }
 
 .hero-slider-item{
@@ -21,6 +25,7 @@
     color: #600624;
     font-size: 1.1rem;
     font-weight: 800;
+    opacity: 0;
 }
 
 .hero-text-name{
@@ -28,12 +33,14 @@
     font-size: 2rem;
     font-weight: 600;
     margin: 40px 0 30px;
+    opacity: 0;
 }
 
 .hero-text-sub{
     color: #000;
     font-size: .9rem;
     font-weight: 500;
+    opacity: 0;
 }
 
 .hero-view{
@@ -46,6 +53,7 @@
     padding: 20px;
     cursor: pointer;
     margin-top: 40px;
+    opacity: 0;
 }
 
 .hero-view p{
@@ -137,6 +145,8 @@
     display:block;
     background:#ccc;
     border: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .hero-slider-dots .slick-active button{
@@ -280,6 +290,8 @@
     display:block;
     background:#ccc;
     border: 0;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .hero-slider-dots .slick-active button{

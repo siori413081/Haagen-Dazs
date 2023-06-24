@@ -130,12 +130,10 @@
     margin-top: 80px;
 }
 
-.slider{
-}
-
 .slider img {
     width:100%;
     height:auto;
+    border-radius: 3px;
 }
 
 .slider .slick-slide {
@@ -159,7 +157,7 @@
 .slick-prev,
 .slick-next {
     position: absolute;/*絶対配置にする*/
-    top: 95.5%;
+    top: 96%;
     cursor: pointer;/*マウスカーソルを指マークに*/
     outline: none;/*クリックをしたら出てくる枠線を消す*/
     border-top: 2px solid #666;/*矢印の色*/
@@ -181,10 +179,31 @@
 /*ドットナビゲーションの設定*/
 
 .product-slide-dots {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 	margin-top: 60px;
+}
+
+.product-slide-dots::before{
+    position: absolute;
+    top: 0;
+    left: 290px;
+    content: "'23 MAR";
+    font-size: .8rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.product-slide-dots::after{
+    position: absolute;
+    top: 0;
+    right: 290px;
+    content: "'23 JUL";
+    font-size: .8rem;
+    font-weight: bold;
+    color: #000;
 }
 
 .product-slide-dots li {
@@ -271,6 +290,7 @@
 .slider img {
     width:100%;
     height:auto;
+    border-radius: 3px;
 }
 
 .slider .slick-slide {

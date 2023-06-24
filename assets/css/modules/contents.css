@@ -134,6 +134,16 @@
     border-right: 2px solid #fff;
 }
 
+.contents-image{
+    width: 25rem;
+    height: 25rem;
+    margin-right: 40px;
+}
+
+.contents-image{
+    object-fit: cover;
+}
+
 .contents-border{
 	position: relative;
     border: 1px solid #efefef;

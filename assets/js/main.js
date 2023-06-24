@@ -66,6 +66,10 @@ $('.hamburgerMenu-guide-icon').hover(function() {
 	$(this).children('p').toggleClass('hover');
 });
 
+$('.hamburgerMenu-search-word span').hover(function() {
+	$(this).toggleClass('hover');
+});
+
 //虫眼鏡
 $('.header-search-icon').click(function() {
 	$('.searchMenu').toggleClass('active');
@@ -73,6 +77,10 @@ $('.header-search-icon').click(function() {
 
 $('.searchMenu-close-btn,.hamburgerMenu-sp-search').click(function() {
 	$('.searchMenu').toggleClass('active');
+});
+
+$('.searchMenu-word span').hover(function() {
+	$(this).toggleClass('hover');
 });
 
 //コンテンツ
@@ -122,8 +130,31 @@ $('.slider').slick({
 		arrows:false,
 		settings: {
 			slidesToShow: 2,//スライドを画面に1枚見せる
-			slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
+			slidesToScroll: 1.5,//1回のスクロールで1枚の写真を移動して見せる
 		}
 	}
 ]
 });
+
+function fadeAnime(){
+
+//ふわっと動くきっかけのクラス名と動きのクラス名の設定
+$('.appearTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+	var elemPos = $(this).offset().top-50; //要素より、50px上の
+	var scroll = $(window).scrollTop();
+	var windowHeight = $(window).height();
+	if (scroll >= elemPos - windowHeight){
+	$(this).addClass('appear');
+	// 画面内に入ったらfadeInというクラス名を追記
+	}else{
+	$(this).removeClass('appear');
+	// 画面外に出たらfadeInというクラス名を外す
+	}
+	});
+}
+
+
+$(window).scroll(function (){
+    fadeAnime();
+});
+

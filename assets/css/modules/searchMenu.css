@@ -73,6 +73,17 @@
     font-weight: 500;
 }
 
+.searchMenu-word span{
+    cursor: pointer;
+    color: #000;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.searchMenu-word span.hover{
+    color: #600624;
+}
+
 .searchMenu p{
     color: #000;
     font-size: .9rem;
@@ -118,7 +129,6 @@
     padding: 50px 80px 50px;
     background-color: #fff;
     border-bottom: 1px solid #efefef;
-    box-sizing: border-box;
 }
 
 .searchMenu-form{

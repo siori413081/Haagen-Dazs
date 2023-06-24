@@ -11,7 +11,7 @@
     height: 100vh;
     background-color: #F8F8F8;
     overflow: scroll;
-    z-index: 2;
+    z-index: 1;
 }
 
 .hamburgerMenu.active{
@@ -231,16 +231,51 @@
     font-weight: 500;
 }
 
-.hamburgerMenu-search-word p{
+.hamburgerMenu-search-word p,
+.hamburgerMenu-search-word span{
     color: #000;
     font-size: .9rem;
     font-weight: 500;
     line-height: 2;
 }
 
+.hamburgerMenu-search-word span{
+    cursor: pointer;
+}
+
+.hamburgerMenu-search-word span.hover{
+    color: #600624;
+}
+
 .hamburgerMenu-newProducts-title{
     padding: 150px 50px 0;
 }
+
+.hamburgerMenu-newProducts-slider-container{
+    width: 1812px;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.hamburgerMenu-newProducts-slider-wrapper{
+    display: flex;
+    animation: slide-flow 20s infinite linear 1s both;
+}
+
+.hamburgerMenu-newProducts-slide{
+    width: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+@keyframes slide-flow {
+    0% {transform: translateX(0);}
+    100% { transform: translateX(-100%);}
+}
+
 
 }
 
