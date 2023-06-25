@@ -5,6 +5,11 @@ $('.footer-sp-menuItem').click(function() {
     $(this).children('.footer-sp-menuTitle').children('p').toggleClass('active');
 });
 
+//header
+$('.header-nav-list-item').hover(function() {
+	$(this).children('.header-nav-list-item-mini').toggleClass('hover');
+});
+
 //hero
 $('.hero-view').hover(function() {
 	$(this).children().toggleClass('hover');
@@ -69,6 +74,19 @@ $('.hamburgerMenu-guide-icon').hover(function() {
 $('.hamburgerMenu-search-word span').hover(function() {
 	$(this).toggleClass('hover');
 });
+
+$('.hamburgerMenu-sns-icon').hover(function() {
+	$(this).toggleClass('hover');
+});
+
+$('.hamburgerMenu-btn').hover(function() {
+	$(this).toggleClass('active');
+});
+
+$('.hamburgerMenu-btn').click(function() {
+	$('.hamburgerMenu').toggleClass('active');
+});
+
 
 //虫眼鏡
 $('.header-search-icon').click(function() {
@@ -151,8 +169,25 @@ $('.appearTrigger').each(function(){ //fadeInUpTriggerというクラス名が
 	// 画面外に出たらfadeInというクラス名を外す
 	}
 	});
-}
 
+	var beforePos = 0;//スクロールの値の比較用の設定
+    var elemTop = $('.notice').offset().top;//.noticeの位置まできたら
+	var scroll = $(window).scrollTop();
+    //ヘッダーの出し入れをする
+    if(scroll == beforePos) {
+		//IE11対策で処理を入れない
+    }else if(elemTop > scroll || 0 > scroll - beforePos){
+		//ヘッダーが上から出現する
+		$('.header').removeClass('UpMove');	//#headerにUpMoveというクラス名を除き
+		$('.header').addClass('DownMove');//#headerにDownMoveのクラス名を追加
+    }else {
+		//ヘッダーが上に消える
+        $('.header').removeClass('DownMove');//#headerにDownMoveというクラス名を除き
+		$('.header').addClass('UpMove');//#headerにUpMoveのクラス名を追加
+    }
+
+    beforePos = scroll;//現在のスクロール値を比較用のbeforePosに格納
+}
 
 $(window).scroll(function (){
     fadeAnime();

@@ -106,6 +106,7 @@
 
 .gallery-item{
     width: 30%;
+    cursor: pointer;
 }
 
 .gallery-item-image{
@@ -170,6 +171,7 @@
 
 .gallery-item{
     width: 30%;
+    cursor: pointer;
 }
 
 .gallery-item-image{

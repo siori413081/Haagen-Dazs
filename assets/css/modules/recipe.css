@@ -116,6 +116,7 @@
 .recipe-contents-item{
     width: 8%;
     margin-right: 30px;
+    cursor: pointer;
 }
 
 .recipe-contents-item:last-child{
@@ -191,6 +192,7 @@
 .recipe-contents-item{
     width: 10%;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .recipe-contents-item:last-child{

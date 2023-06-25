@@ -11,7 +11,7 @@
     height: 100vh;
     background-color: #F8F8F8;
     overflow: scroll;
-    z-index: 1;
+    z-index: 3;
 }
 
 .hamburgerMenu.active{
@@ -27,11 +27,62 @@
     justify-content: space-between;
 }
 
+.hamburgerMenu-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
 .hamburgerMenu-logo{
     width: 100px;
     height: 60px;
-    padding: 30px;
     cursor: pointer;
+}
+
+
+.hamburgerMenu-btn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+    transform: scale(1,1);
+    z-index: 999;
+}
+
+.hamburgerMenu-btn span{
+    position: absolute;
+    left: 14px;
+    width: 45%;
+    height: 2px;
+    background-color: #fff;
+    display: inline-block;
+    transition: all .4s;
+}
+
+.hamburgerMenu-btn.active{
+    background-color: #600624;
+    transform: scale(1.3,1.3);
+}
+
+.hamburgerMenu-btn span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(45deg);
+    width: 30%;
+}
+
+.hamburgerMenu-btn span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.hamburgerMenu-btn span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(-45deg);
+    width: 30%;
 }
 
 .hamburgerMenu-mainArea{
@@ -188,6 +239,14 @@
     margin-bottom: 20px;
 }
 
+.hamburgerMenu-sns-icon{
+    cursor: pointer;
+}
+
+.hamburgerMenu-sns-icon.hover{
+    opacity: .7;
+}
+
 .hamburgerMenu-side{
     background-color: #fff;
     width: 35%;
@@ -247,6 +306,10 @@
     color: #600624;
 }
 
+.hamburgerMenu-newProducts{
+    overflow: hidden;
+}
+
 .hamburgerMenu-newProducts-title{
     padding: 150px 50px 0;
 }
@@ -276,9 +339,7 @@
     100% { transform: translateX(-100%);}
 }
 
-
 }
-
 
 @media screen and (max-width: 768px) {
     /* SP style */
@@ -297,16 +358,10 @@
     top: 0;
 }
 
-.hamburgerMenu-header-sp{
-    position: relative;
+.hamburgerMenu-header{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-
-.hamburgerMenu-sp-search{
-    position: fixed;
-    left: 20px;
 }
 
 .hamburgerMenu-logo{
@@ -318,6 +373,45 @@
 .hamburgerMenu-logo img{
     width: 100%;
     height: 100%;
+}
+
+.hamburgerMenu-btn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+    transform: scale(1,1);
+    z-index: 999;
+}
+
+.hamburgerMenu-btn span{
+    position: absolute;
+    left: 14px;
+    width: 45%;
+    height: 2px;
+    background-color: #fff;
+    display: inline-block;
+    transition: all .4s;
+}
+
+.hamburgerMenu-btn span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(45deg);
+    width: 30%;
+}
+
+.hamburgerMenu-btn span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.hamburgerMenu-btn span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(-45deg);
+    width: 30%;
 }
 
 .hamburgerMenu-wrap{
@@ -437,6 +531,44 @@
 
 .hamburgerMenu-side{
     display: none;
+}
+
+.hamburgerMenu-newProducts{
+    overflow: hidden;
+    padding-bottom: 30px;
+    background-color: #fff;
+    border-top: 1px solid #efefef;
+}
+
+.hamburgerMenu-newProducts-title{
+    color: #600624;
+    font-size: .8rem;
+    font-weight: 800;
+    padding: 30px;
+}
+
+.hamburgerMenu-newProducts-slider-container{
+    width: 1973px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.hamburgerMenu-newProducts-slider-wrapper{
+    display: flex;
+    animation: slide-flow 20s infinite linear 1s both;
+}
+
+.hamburgerMenu-newProducts-slide{
+    width: 80px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+@keyframes slide-flow {
+    0% {transform: translateX(0);}
+    100% { transform: translateX(-100%);}
 }
 
 }
