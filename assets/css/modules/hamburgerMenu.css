@@ -339,6 +339,10 @@
     100% { transform: translateX(-100%);}
 }
 
+.hamburgerMenu-newProducts-sp{
+    display: none;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -533,7 +537,7 @@
     display: none;
 }
 
-.hamburgerMenu-newProducts{
+.hamburgerMenu-newProducts-sp{
     overflow: hidden;
     padding-bottom: 30px;
     background-color: #fff;
