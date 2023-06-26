@@ -368,6 +368,10 @@
     align-items: center;
 }
 
+.hamburgerMenu-sp-search{
+    cursor: pointer;
+}
+
 .hamburgerMenu-logo{
     width: 150px;
     height: 80px;
@@ -531,6 +535,10 @@
     font-size: .8rem;
     font-weight: 900;
     padding: 30px 0 20px;
+}
+
+.hamburgerMenu-sns-icon{
+    cursor: pointer;
 }
 
 .hamburgerMenu-side{

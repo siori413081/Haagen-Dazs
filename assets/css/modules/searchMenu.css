@@ -59,6 +59,7 @@
     top: 50%;
     right: -50px;
     transform: translate(-50%,-50%);
+    cursor: pointer;
 }
 
 .searchMenu-title{
@@ -150,6 +151,7 @@
     top: 50%;
     right: -50px;
     transform: translate(-50%,-50%);
+    cursor: pointer;
 }
 
 .searchMenu-title{

@@ -14,7 +14,7 @@ $('.header-onlineShop-mini-item a').hover(function() {
 	$(this).children('.header-onlineShop-mini-item p').toggleClass('hover');
 });
 
-$('.header-onlineShop-icon').hover(function() {
+$('.header-onlineShop').hover(function() {
 	$('.header-onlineShop-mini').toggleClass('active');
 });
 
@@ -154,7 +154,7 @@ $('.slider').slick({
 		}
 	},
 	{
-		breakpoint: 426,//モニターの横幅が426px以下の見せ方
+		breakpoint: 768,//モニターの横幅が426px以下の見せ方
 		arrows:false,
 		settings: {
 			slidesToShow: 2,//スライドを画面に1枚見せる

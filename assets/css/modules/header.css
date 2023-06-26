@@ -277,6 +277,7 @@
 .header-logo{
     width: 150px;
     height: 80px;
+    cursor: pointer;
 }
 
 .header-logo img{
