@@ -10,6 +10,14 @@ $('.header-nav-list-item').hover(function() {
 	$(this).children('.header-nav-list-item-mini').toggleClass('hover');
 });
 
+$('.header-onlineShop-mini-item a').hover(function() {
+	$(this).children('.header-onlineShop-mini-item p').toggleClass('hover');
+});
+
+$('.header-onlineShop-icon').hover(function() {
+	$('.header-onlineShop-mini').toggleClass('active');
+});
+
 //hero
 $('.hero-view').hover(function() {
 	$(this).children().toggleClass('hover');
@@ -20,7 +28,9 @@ $('.hero-view').hover(function() {
 $(document).ready(function(){
   $('.hero-slider-list').slick({
     autoplay: true, //自動再生
-    vertical: true, //縦のスライドを有効化
+	fade:true,
+	speed:2000,
+	autoplaySpeed:4000,
 	arrows:false,
 	dots:true,
 	dotsClass:'hero-slider-dots',
@@ -157,7 +167,7 @@ $('.slider').slick({
 function fadeAnime(){
 
 //ふわっと動くきっかけのクラス名と動きのクラス名の設定
-$('.appearTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+/*$('.appearTrigger').each(function(){ //fadeInUpTriggerというクラス名が
 	var elemPos = $(this).offset().top-50; //要素より、50px上の
 	var scroll = $(window).scrollTop();
 	var windowHeight = $(window).height();
@@ -168,7 +178,7 @@ $('.appearTrigger').each(function(){ //fadeInUpTriggerというクラス名が
 	$(this).removeClass('appear');
 	// 画面外に出たらfadeInというクラス名を外す
 	}
-	});
+	});*/
 
 	var beforePos = 0;//スクロールの値の比較用の設定
     var elemTop = $('.notice').offset().top;//.noticeの位置まできたら
