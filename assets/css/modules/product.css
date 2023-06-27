@@ -188,22 +188,24 @@
 
 .product-slide-dots::before{
     position: absolute;
-    top: 0;
-    left: 290px;
+    top: 50%;
+    left: 30%;
     content: "'23 MAR";
     font-size: .8rem;
     font-weight: bold;
     color: #000;
+    transform: translate(0,-50%);
 }
 
 .product-slide-dots::after{
     position: absolute;
-    top: 0;
-    right: 290px;
+    top: 50%;
+    right: 30%;
     content: "'23 JUL";
     font-size: .8rem;
     font-weight: bold;
     color: #000;
+    transform: translate(0,-50%);
 }
 
 .product-slide-dots li {

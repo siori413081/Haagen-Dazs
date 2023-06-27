@@ -275,6 +275,17 @@
     top: 50%;
     right: -50px;
     transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.fa-circle{
+    transform: scale(1,1);
+    transition: all .3s;
+}
+
+.fa-circle.hover{
+    transform: scale(1.3,1.3);
+    transition: all .3s;
 }
 
 .hamburgerMenu-search-title,

@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header-inner{
@@ -260,6 +260,14 @@
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
 
 .header-inner{
     position: relative;
