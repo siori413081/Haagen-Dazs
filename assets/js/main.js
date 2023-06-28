@@ -23,7 +23,6 @@ $('.hero-view').hover(function() {
 	$(this).children().toggleClass('hover');
 });
 
-
 //hero slider
 $(document).ready(function(){
   $('.hero-slider-list').slick({
@@ -95,6 +94,7 @@ $('.hamburgerMenu-btn').hover(function() {
 
 $('.hamburgerMenu-btn').click(function() {
 	$('.hamburgerMenu').toggleClass('active');
+	$('body').toggleClass('active');
 });
 
 $('.hamburgerMenu-search-icon').hover(function() {
@@ -126,6 +126,10 @@ $('.contents-text-view').hover(function() {
 //ギャラリー
 $('.gallery-title-text-pc').hover(function() {
 	$(this).children().toggleClass('hover');
+});
+
+$('.gallery-item').hover(function() {
+	$(this).children('.gallery-movie').toggleClass('active');
 });
 
 //レシピ
@@ -169,6 +173,30 @@ $('.slider').slick({
 		}
 	}
 ]
+});
+
+var $carousel = $('.js-carousel');
+
+// スクロールイベントの監視
+$carousel.on('wheel', function(e) {
+  e.preventDefault();
+
+  if (!$carousel.hasClass('js-slick-moving')) {
+    if (e.originalEvent.deltaY < 0) {
+      $('.slider').slick('slickNext');
+    } else {
+      $('.slider').slick('slickPrev');
+    }
+  }
+})
+
+// スライド送り中を判定するためにクラスを付与する
+$carousel.on('beforeChange', function(){
+  $carousel.addClass('js-slick-moving');
+});
+
+$carousel.on('afterChange', function(){
+  $carousel.removeClass('js-slick-moving');
 });
 
 function fadeAnime(){

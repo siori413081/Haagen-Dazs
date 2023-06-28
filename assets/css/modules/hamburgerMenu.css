@@ -366,7 +366,7 @@
     height: 100vh;
     background-color: #F8F8F8;
     overflow: scroll;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hamburgerMenu.active{

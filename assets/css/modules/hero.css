@@ -171,7 +171,18 @@ canvas{
 }
 
 .hero-slider-dots .slick-active button{
-    background:#600624;/*ドットボタンの現在地表示の色*/
+    background-color: #600624;
+    animation: dots_anim 4s ease-out;
+    opacity: 2;
+}
+
+@keyframes dots_anim {
+	from{
+		height: 0px;
+	}
+	to{
+		height: 60px;
+	}
 }
 
 }
@@ -214,9 +225,6 @@ canvas{
     display: flex!important;
     flex-direction: column-reverse;
     padding: 50px;
-}
-
-.hero-titles{
 }
 
 .hero-text-pop{
@@ -317,7 +325,19 @@ canvas{
 }
 
 .hero-slider-dots .slick-active button{
-    background:#600624;/*ドットボタンの現在地表示の色*/
+    background-color: #600624;
+    animation: dots_anim 4s ease-out;
+    opacity: 2;
 }
+
+@keyframes dots_anim {
+	from{
+		width: 0px;
+	}
+	to{
+		width: 30px;
+	}
+}
+
 
 }
