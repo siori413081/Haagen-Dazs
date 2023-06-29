@@ -360,6 +360,8 @@ function drawSine(canvas, t, zoom, delay) {
 
 init();
 
+
+//gallery productの横スクロール
 const scrollElement = document.querySelector("#scroll-x");
 
 scrollElement.addEventListener("wheel", (e) => {
