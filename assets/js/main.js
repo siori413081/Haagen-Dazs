@@ -36,6 +36,26 @@ $(document).ready(function(){
   });
 });
 
+$(".hero-slider").on("init", function () {
+  $('.hero-image img').addClass("add-animation");
+})
+.on({
+  // スライドが移動する前に発生するイベント
+  beforeChange: function (event, slick, currentSlide, nextSlide) {
+	// 表示されているスライドに"add-animation"のclassをつける
+	$(".slick-slide.hero-image img", this).eq(nextSlide).addClass("add-animation");
+	// あとで"add-animation"のclassを消すための"remove-animation"classを付ける
+	$(".slick-slide.hero-image img", this).eq(currentSlide).addClass("remove-animation");
+  },
+  // スライドが移動した後に発生するイベント
+  afterChange: function () {
+	// 表示していないスライドはアニメーションのclassを外す
+	$(".remove-animation", this).removeClass(
+	  "remove-animation add-animation"
+	);
+  },
+});
+
 //notice
 $('.notice-contents-link').hover(function() {
 	$(this).children().toggleClass('hover');
@@ -183,9 +203,9 @@ $carousel.on('wheel', function(e) {
 
   if (!$carousel.hasClass('js-slick-moving')) {
     if (e.originalEvent.deltaY < 0) {
-      $('.slider').slick('slickNext');
-    } else {
       $('.slider').slick('slickPrev');
+    } else {
+      $('.slider').slick('slickNext');
     }
   }
 })
@@ -339,3 +359,11 @@ function drawSine(canvas, t, zoom, delay) {
 }
 
 init();
+
+const scrollElement = document.querySelector("#scroll-x");
+
+scrollElement.addEventListener("wheel", (e) => {
+  if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+  e.preventDefault();
+  scrollElement.scrollLeft += e.deltaY;
+});

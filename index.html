@@ -4,7 +4,6 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>ハーゲンダッツ</title>
-    <link rel="shortcut icon" href="favicon.ico">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='./assets/css/reset.css'>
     <!--link rel='stylesheet' href='./assets/css/main.css'-->
@@ -627,7 +626,7 @@
     </div><!--header-->
     <div class="product-contents">
         <ul class="slider">
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>3.14 <span>発売</span></p>
                 </div><!--date-->
@@ -636,7 +635,7 @@
                     <p>Bar<br><span>マウンテンチョコファッジ</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>3.14 <span>発売</span></p>
                 </div><!--date-->
@@ -645,7 +644,7 @@
                     <p>Assort Box<br><span>スイート テラス</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>4.11 <span>発売</span></p>
                 </div><!--date-->
@@ -654,7 +653,7 @@
                     <p>Mini Cup<br><span>＜SPOON CRUSH＞<br>あふれるベリー<br>バニラ＆マカダミア</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>4.11 <span>発売</span></p>
                 </div><!--date-->
@@ -663,7 +662,7 @@
                     <p>Mini Cup<br><span>＜SPOON CRUSH＞<br>あふれるショコラ<br>抹茶＆クッキー</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>4.25 <span>発売</span></p>
                 </div><!--date-->
@@ -674,7 +673,7 @@
                     </div><!--text-->
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>5.9 <span>発売</span></p>
                 </div><!--date-->
@@ -683,7 +682,7 @@
                     <p>Assort Box<br><span>クラシックアソート</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>5.23 <span>発売</span></p>
                 </div><!--date-->
@@ -692,7 +691,7 @@
                     <p>Green Craft<br><span>＜グリーンクラフト＞<br>豆乳バニラ</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>5.23 <span>発売</span></p>
                 </div><!--date-->
@@ -701,7 +700,7 @@
                     <p>Green Craft<br><span>＜グリーンクラフト＞<br>豆乳チョコレート＆マカダミア</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>6.6 <span>発売</span></p>
                 </div><!--date-->
@@ -710,7 +709,7 @@
                     <p>Crispy Sandwich<br><span>きなこのバタークリームケーキ</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>6.27 <span>発売予定</span></p>
                 </div><!--date-->
@@ -719,7 +718,7 @@
                     <p>Mini Cup<br><span>＜クリームジェラート＞<br>濃桃～こいもも～</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>6.27 <span>発売予定</span></p>
                 </div><!--date-->
@@ -728,7 +727,7 @@
                     <p>Mini Cup<br><span>＜クリームジェラート＞<br>ピスタチオ＆カカオ</span></p>
                 </div><!--text-->
             </li>
-            <li>
+            <li class="js-carousel">
                 <div class="product-date">
                     <p>7.18 <span>発売予定</span></p>
                 </div><!--date-->
@@ -739,6 +738,10 @@
             </li>
         </ul>
     </div><!--slider-->
+    <div class="product-title-text-sp">
+        <p>すべての商品を見る</p>
+        <div class="product-arrow-right"></div>
+    </div>
 </section>
 <section class="recipe">
     <div class="recipe-header">
@@ -750,7 +753,7 @@
     </div><!--header-->
     <div class="recipe-contents">
         <div class="recipe-slider">
-            <ul class="recipe-contents-list">
+            <ul class="recipe-contents-list" id="scroll-x">
                 <li class="recipe-contents-item">
                     <img src="./assets/images/recipe01.jpg">
                     <p class="recipe-item-title">レモンシュー</p>
@@ -870,7 +873,7 @@
     </div><!--header-->
     <div class="gallery-contents">
         <div class="gallery-slider">
-            <ul class="gallery-list">
+            <ul class="gallery-list" id="scroll-x">
                 <li class="gallery-item">
                     <div class="gallery-item-image1"></div>
                     <div class="fa-2x gallery-movie">

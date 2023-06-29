@@ -200,6 +200,7 @@
 }
 
 .gallery-item{
+    position: relative;
     width: 30%;
     cursor: pointer;
 }
@@ -225,6 +226,12 @@
 .gallery-item-image3{
     background-image: url(../../../assets/images/gallery03.jpg);
     background-size: cover;
+}
+
+.gallery-movie{
+    position: absolute!important;
+    bottom: 30%;
+    right: 20px;
 }
 
 .gallery-item-text-main{
