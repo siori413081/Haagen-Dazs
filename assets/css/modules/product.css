@@ -315,13 +315,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-	margin: 60px 0;
+	margin: 60px 15%;
 }
 
 .product-slide-dots::before{
     position: absolute;
     top: 50%;
-    left: 6%;
+    left: -18%;
     content: "'23 MAR";
     font-size: .7rem;
     font-weight: bold;
@@ -332,7 +332,7 @@
 .product-slide-dots::after{
     position: absolute;
     top: 50%;
-    right: 6%;
+    right: -18%;
     content: "'23 JUL";
     font-size: .7rem;
     font-weight: bold;
