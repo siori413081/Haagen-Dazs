@@ -155,7 +155,7 @@ canvas{
 }
 
 .add-animation {
-animation: zoomUp 10s linear 0s normal both;
+animation: zoomUp 40s linear 0s normal both;
 }
 
 @keyframes zoomUp {
@@ -331,7 +331,7 @@ canvas{
 }
 
 .add-animation {
-    animation: zoomUp 10s linear 0s normal both;
+    animation: zoomUp 40s linear 0s normal both;
     }
 
 @keyframes zoomUp {
