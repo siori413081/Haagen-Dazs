@@ -130,7 +130,7 @@
     margin-top: 80px;
 }
 
-.slider img {
+.product-slider img {
     width:100%;
     height:auto;
     border-radius: 3px;
@@ -138,12 +138,12 @@
     transition: all .2s;
 }
 
-.slider img:hover{
+.product-slider img:hover{
     transform: scale(1.1,1.1);
     transition: all .2s;
 }
 
-.slider .slick-slide {
+.product-slider .slick-slide {
     margin:0 10px;
 }
 
@@ -296,17 +296,17 @@
     font-weight: 500;
 }
 
-.slider{
+.product-slider{
     margin: 0 auto;
 }
 
-.slider img {
+.product-slider img {
     width:100%;
     height:auto;
     border-radius: 3px;
 }
 
-.slider .slick-slide {
+.product-slider .slick-slide {
     margin:0 10px;
 }
 

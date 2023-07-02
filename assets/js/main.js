@@ -166,33 +166,63 @@ $('.footer-guide-icon').hover(function() {
 	$(this).children('p').toggleClass('hover');
 });
 
-//slider
-$('.slider').slick({
+//product slider
+$('.product-slider').slick({
 	autoplay: false,//自動的に動き出すか。初期値はfalse。
 	infinite: false,//スライドをループさせるかどうか。初期値はtrue。
-	slidesToShow: 3,//スライドを画面に3枚見せる
-	slidesToScroll: 3,//1回のスクロールで3枚の写真を移動して見せる
+	slidesToShow: 5,//スライドを画面に3枚見せる
+	slidesToScroll: 2,//1回のスクロールで3枚の写真を移動して見せる
 	prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
 	nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
 	dots: true,//下部ドットナビゲーションの表示
 	dotsClass: "product-slide-dots",
 	responsive: [
-		{
-		breakpoint: 2000,//モニターの横幅が769px以下の見せ方
-		settings: {
-			slidesToShow: 5,//スライドを画面に2枚見せる
-			slidesToScroll: 2,//1回のスクロールで2枚の写真を移動して見せる
-		}
-	},
 	{
 		breakpoint: 768,//モニターの横幅が426px以下の見せ方
-		arrows:false,
 		settings: {
 			slidesToShow: 2,//スライドを画面に1枚見せる
 			slidesToScroll: 1.5,//1回のスクロールで1枚の写真を移動して見せる
-		}
-	}
-]
+			arrows:false,
+		},
+	},
+],
+});
+
+//recipe slider
+$('.recipe-slider').slick({
+	autoplay: false,//自動的に動き出すか。初期値はfalse。
+	infinite: false,//スライドをループさせるかどうか。初期値はtrue。
+	slidesToShow: 4.5,//スライドを画面に3枚見せる
+	slidesToScroll: 2,//1回のスクロールで3枚の写真を移動して見せる
+	arrows: false,
+	dots: false,//下部ドットナビゲーションの表示
+	responsive: [
+	{
+		breakpoint: 768,//モニターの横幅が768px以下の見せ方
+		settings: {
+			slidesToShow: 3,//スライドを画面に3枚見せる
+			slidesToScroll: 1.5,//1回のスクロールで1枚の写真を移動して見せる
+		},
+	},
+],
+});
+
+//gallery slider
+$('.gallery-slider').slick({
+	autoplay: false,//自動的に動き出すか。初期値はfalse。
+	infinite: false,//スライドをループさせるかどうか。初期値はtrue。
+	slidesToShow: 3,//スライドを画面に3枚見せる
+	arrows: false,
+	dots: false,//下部ドットナビゲーションの表示
+	responsive: [
+	{
+		breakpoint: 768,//モニターの横幅が768px以下の見せ方
+		settings: {
+			slidesToShow: 1,//スライドを画面に3枚見せる
+			slidesToScroll: 1.5,//1回のスクロールで1枚の写真を移動して見せる
+		},
+	},
+],
 });
 
 var $carousel = $('.js-carousel');
@@ -203,9 +233,40 @@ $carousel.on('wheel', function(e) {
 
   if (!$carousel.hasClass('js-slick-moving')) {
     if (e.originalEvent.deltaY < 0) {
-      $('.slider').slick('slickPrev');
+      $('.product-slider').slick('slickPrev');
     } else {
-      $('.slider').slick('slickNext');
+      $('.product-slider').slick('slickNext');
+    }
+  }
+})
+
+var $carousel = $('.recipe-carousel');
+
+// スクロールイベントの監視
+$carousel.on('wheel', function(e) {
+  e.preventDefault();
+
+  if (!$carousel.hasClass('js-slick-moving')) {
+    if (e.originalEvent.deltaY < 0) {
+      $('.recipe-slider').slick('slickPrev');
+    } else {
+      $('.recipe-slider').slick('slickNext');
+    }
+  }
+})
+
+
+var $carousel = $('.gallery-carousel');
+
+// スクロールイベントの監視
+$carousel.on('wheel', function(e) {
+  e.preventDefault();
+
+  if (!$carousel.hasClass('js-slick-moving')) {
+    if (e.originalEvent.deltaY < 0) {
+      $('.gallery-slider').slick('slickPrev');
+    } else {
+      $('.gallery-slider').slick('slickNext');
     }
   }
 })
@@ -360,12 +421,3 @@ function drawSine(canvas, t, zoom, delay) {
 
 init();
 
-
-//gallery productの横スクロール
-const scrollElement = document.querySelector("#scroll-x");
-
-scrollElement.addEventListener("wheel", (e) => {
-  if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
-  e.preventDefault();
-  scrollElement.scrollLeft += e.deltaY;
-});

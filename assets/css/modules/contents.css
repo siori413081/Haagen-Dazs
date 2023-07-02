@@ -140,8 +140,9 @@
     margin-right: 40px;
 }
 
-.contents-image{
+.contents-image img{
     object-fit: cover;
+    cursor: pointer;
 }
 
 .contents-border{

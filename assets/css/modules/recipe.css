@@ -96,25 +96,13 @@
 
 .recipe-contents{
     margin-top: 80px;
-    overflow: auto;
 }
 
 .recipe-slider{
-    width: 232vw;
     padding: 0 5%;
-    overflow-x: scroll;
-}
-
-.recipe-slider::-webkit-scrollbar{
-    display: none;
-}
-
-.recipe-contents-list{
-    display: flex;
 }
 
 .recipe-contents-item{
-    width: 8%;
     margin-right: 30px;
     cursor: pointer;
 }
@@ -177,16 +165,10 @@
 
 .recipe-contents{
     margin-top: 40px;
-    overflow: auto;
 }
 
 .recipe-slider{
-    width: 1500px;
-    padding: 0 8%;
-}
-
-.recipe-contents-list{
-    display: flex;
+    padding-left: 8%;
 }
 
 .recipe-contents-item{
