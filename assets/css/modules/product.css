@@ -151,36 +151,69 @@
 
 /*戻る、次へ矢印の位置*/
 
-
-.slick-arrow:before{
-	content:""!important;
-    width: 100%!important;
-    height: 100%!important;
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
     position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.slick-prev,
-.slick-next {
-    position: absolute;/*絶対配置にする*/
     top: 96%;
-    cursor: pointer;/*マウスカーソルを指マークに*/
-    outline: none;/*クリックをしたら出てくる枠線を消す*/
-    border-top: 2px solid #666;/*矢印の色*/
-    border-right: 2px solid #666;/*矢印の色*/
-    height: 15px;
-    width: 15px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
 }
-
-.slick-prev {/*戻る矢印の位置と形状*/
+ 
+.slick-prev {
     left: 60px;
-    transform: rotate(-135deg);
 }
-
-.slick-next {/*次へ矢印の位置と形状*/
+ 
+.slick-next {
     right: 60px;
-    transform: rotate(45deg);
+}
+ 
+.slick-prev:before, .slick-next:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 40px;
+    color: #000;
+    --fa-primary-color: #000;
+    --fa-secondary-color: #fff;
+}
+ 
+.slick-prev:before {
+    content: '\f137';
+}
+ 
+.slick-next:before {
+    content: '\f138';
+}
+ 
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+ 
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+    opacity: 1;
+}
+ 
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+    opacity: .25;
 }
 
 /*ドットナビゲーションの設定*/

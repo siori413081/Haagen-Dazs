@@ -219,7 +219,7 @@ $('.gallery-slider').slick({
 		breakpoint: 768,//モニターの横幅が768px以下の見せ方
 		settings: {
 			slidesToShow: 1,//スライドを画面に3枚見せる
-			slidesToScroll: 1.5,//1回のスクロールで1枚の写真を移動して見せる
+			slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
 		},
 	},
 ],
@@ -280,23 +280,10 @@ $carousel.on('afterChange', function(){
   $carousel.removeClass('js-slick-moving');
 });
 
-function fadeAnime(){
+var beforePos = 0;//スクロールの値の比較用の設定
 
-//ふわっと動くきっかけのクラス名と動きのクラス名の設定
-/*$('.appearTrigger').each(function(){ //fadeInUpTriggerというクラス名が
-	var elemPos = $(this).offset().top-50; //要素より、50px上の
-	var scroll = $(window).scrollTop();
-	var windowHeight = $(window).height();
-	if (scroll >= elemPos - windowHeight){
-	$(this).addClass('appear');
-	// 画面内に入ったらfadeInというクラス名を追記
-	}else{
-	$(this).removeClass('appear');
-	// 画面外に出たらfadeInというクラス名を外す
-	}
-	});*/
+function ScrollAnime(){
 
-	var beforePos = 0;//スクロールの値の比較用の設定
     var elemTop = $('.notice').offset().top;//.noticeの位置まできたら
 	var scroll = $(window).scrollTop();
     //ヘッダーの出し入れをする
@@ -316,7 +303,7 @@ function fadeAnime(){
 }
 
 $(window).scroll(function (){
-    fadeAnime();
+    ScrollAnime();
 });
 
 //hero 波

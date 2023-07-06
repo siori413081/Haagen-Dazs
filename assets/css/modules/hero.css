@@ -175,7 +175,7 @@ animation: zoomUp 40s linear 0s normal both;
 }
 
 .hero-slider-dots li{
-    width: 12px;
+    width: 2px;
     height: 60px;
     background:#efefef;
     margin-bottom: 10px;
@@ -184,8 +184,9 @@ animation: zoomUp 40s linear 0s normal both;
 .hero-slider-dots li button{
     color: transparent;
     outline: none;
-    width: 100%;
+    width: 2px!important;
     height: 100%;
+    padding: 0;
     display:block;
     border: 0;
     cursor: pointer;
