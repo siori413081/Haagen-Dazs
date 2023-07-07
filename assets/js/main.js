@@ -5,17 +5,22 @@ $('.footer-sp-menuItem').click(function() {
     $(this).children('.footer-sp-menuTitle').children('p').toggleClass('active');
 });
 
-//header
+//header nav
 $('.header-nav-list-item').hover(function() {
 	$(this).children('.header-nav-list-item-mini').toggleClass('hover');
+});
+
+//header onlineShop
+$('.header-onlineShop-icon').hover(function() {
+	$(this).children().toggleClass('red');
 });
 
 $('.header-onlineShop-mini-item a').hover(function() {
 	$(this).children('.header-onlineShop-mini-item p').toggleClass('hover');
 });
 
-$('.header-onlineShop').hover(function() {
-	$('.header-onlineShop-mini').toggleClass('active');
+$('.header-onlineShop-icon').hover(function() {
+	$(this).next('.header-onlineShop-mini-wrap').slideToggle();
 });
 
 //hero
@@ -280,11 +285,12 @@ $carousel.on('afterChange', function(){
   $carousel.removeClass('js-slick-moving');
 });
 
+//header 上にスクロールで出る
 var beforePos = 0;//スクロールの値の比較用の設定
 
 function ScrollAnime(){
 
-    var elemTop = $('.notice').offset().top;//.noticeの位置まできたら
+    var elemTop = $('.notice').offset().top-500;//.noticeの位置まできたら
 	var scroll = $(window).scrollTop();
     //ヘッダーの出し入れをする
     if(scroll == beforePos) {
@@ -305,6 +311,19 @@ function ScrollAnime(){
 $(window).scroll(function (){
     ScrollAnime();
 });
+
+//header 途中から背景白
+$(function () {
+	let elemTop = $('.notice').offset().top-200;
+
+	$(window).on('scroll', function () {
+		if ((elemTop) < $(this).scrollTop()) {
+			$('.js-header').addClass('change-color');
+	  } else {
+			$('.js-header').removeClass('change-color');
+	  }
+	});
+  });
 
 //hero 波
 

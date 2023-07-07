@@ -376,12 +376,15 @@
 
 .hamburgerMenu-header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .hamburgerMenu-sp-search{
+    position: fixed;
+    left: 20px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .hamburgerMenu-logo{
@@ -396,6 +399,12 @@
 }
 
 .hamburgerMenu-btn{
+    position: fixed;
+    right: 20px;
+    z-index: 1;
+}
+
+.hamburgerMenu-btn-inner{
     position: relative;
     width: 50px;
     height: 50px;
@@ -406,7 +415,7 @@
     z-index: 999;
 }
 
-.hamburgerMenu-btn span{
+.hamburgerMenu-btn-inner span{
     position: absolute;
     left: 14px;
     width: 45%;
@@ -416,18 +425,18 @@
     transition: all .4s;
 }
 
-.hamburgerMenu-btn span:nth-of-type(1) {
+.hamburgerMenu-btn-inner span:nth-of-type(1) {
     top: 18px;
     left: 18px;
     transform: translateY(6px) rotate(45deg);
     width: 30%;
 }
 
-.hamburgerMenu-btn span:nth-of-type(2) {
+.hamburgerMenu-btn-inner span:nth-of-type(2) {
 	opacity: 0;
 }
 
-.hamburgerMenu-btn span:nth-of-type(3){
+.hamburgerMenu-btn-inner span:nth-of-type(3){
     top: 30px;
     left: 18px;
     transform: translateY(-6px) rotate(-45deg);

@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body>
-<section class="header DownMove">
+<section class="header DownMove js-header">
     <header class="header-inner">
         <div class="header-menu-left">
             <div class="header-logo">
@@ -77,29 +77,31 @@
         <div class="header-menu-right">
             <div class="header-onlineShop">
                 <div class="header-onlineShop-icon">
-                    <i data-feather="shopping-cart"></i>
+                    <a><i data-feather="shopping-cart"></i></a>
                     <p>Online Shop</p>
                 </div><!--icon-->
-                <div class="header-onlineShop-mini">
-                    <div class="header-onlineShop-mini-item">
+                <div class="header-onlineShop-mini-wrap">
+                    <ul class="header-onlineShop-mini">
+                        <li class="header-onlineShop-mini-item">
+                            <a rel="#">
+                                <span class="fa-stack fa-xs">
+                                    <i class="fa-solid fa-circle fa-stack-2x" style="color: #600624;"></i>
+                                    <i class="fa-solid fa-gift fa-stack-1x" style="color: #ffffff;"></i>
+                                </span>
+                                <p>ギフトセットを<br>ご購入の方</p>
+                            </a>
+                        <li>
+                        <li class="header-onlineShop-mini-item">
                         <a rel="#">
                             <span class="fa-stack fa-xs">
                                 <i class="fa-solid fa-circle fa-stack-2x" style="color: #600624;"></i>
-                                <i class="fa-solid fa-gift fa-stack-1x" style="color: #ffffff;"></i>
+                                <i class="fa-solid fa-ticket fa-stack-1x" style="color: #ffffff;"></i>
                             </span>
-                            <p>ギフトセットを<br>ご購入の方</p>
+                            <p>ギフト券を<br>ご購入の方</p>
                         </a>
-                    </div>
-                    <div class="header-onlineShop-mini-item">
-                    <a rel="#">
-                        <span class="fa-stack fa-xs">
-                            <i class="fa-solid fa-circle fa-stack-2x" style="color: #600624;"></i>
-                            <i class="fa-solid fa-ticket fa-stack-1x" style="color: #ffffff;"></i>
-                        </span>
-                        <p>ギフト券を<br>ご購入の方</p>
-                    </a>
-                    </div>
-                </div>
+                        <li>
+                    </ul>
+                </div><!--wrap-->
             </div><!--OnlineShop-->
             <div class="header-search-icon">
                 <a rel="#">
@@ -127,10 +129,12 @@
                 <img src="./assets/images/logo.png">
             </div>
             <div class="hamburgerMenu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+                <div class="hamburgerMenu-btn-inner">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!--inner-->
+            </div><!--btn-->
         </div><!--header-->
     </div><!--sp-->
     <div class="hamburgerMenu-newProducts-sp">
