@@ -20,7 +20,11 @@ $('.header-onlineShop-mini-item a').hover(function() {
 });
 
 $('.header-onlineShop-icon').hover(function() {
-	$(this).next('.header-onlineShop-mini-wrap').slideToggle();
+	$('.header-onlineShop-mini').toggleClass('active');
+});
+
+$('.header-onlineShop-mini').hover(function() {
+	$(this).toggleClass('active');
 });
 
 //hero
