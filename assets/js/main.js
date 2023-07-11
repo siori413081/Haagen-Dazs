@@ -353,7 +353,7 @@ function init() {
 		for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
         canvas.width = document.documentElement.clientWidth; //Canvasのwidthをウィンドウの幅に合わせる
-        canvas.height = 200;//波の高さ
+        canvas.height = 100;//波の高さ
         canvas.contextCache = canvas.getContext("2d");
     }
     // 共通の更新処理呼び出し
@@ -398,7 +398,7 @@ function drawWave(canvas, color, alpha, zoom, delay) {
     context.fillStyle = color;//塗りの色
     context.globalAlpha = alpha;
     context.beginPath(); //パスの開始
-    drawSine(canvas, info.t / 0.5, zoom, delay);
+    drawSine(canvas, info.t / 1.0, zoom, delay);
     context.lineTo(canvas.width + 10, canvas.height); //パスをCanvasの右下へ
     context.lineTo(0, canvas.height); //パスをCanvasの左下へ
     context.closePath() //パスを閉じる

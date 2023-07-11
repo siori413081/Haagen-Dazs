@@ -22,6 +22,10 @@
     100% {background:#E3E9EE;}/*変化させたい色*/
 }
 
+.wave{
+    position:relative;
+}
+
 canvas{
     position: absolute;
     bottom: 0;
@@ -229,6 +233,11 @@ animation: zoomUp 40s linear 0s normal both;
     100% {background:#E3E9EE;}/*変化させたい色*/
 }
 
+.wave{
+    position:relative;
+    height:100px;
+}
+
 canvas{
     position: absolute;
     bottom: 0;
@@ -374,7 +383,7 @@ canvas{
 
 @keyframes dots_anim {
 	from{
-		width: 0;
+		width: 0%;
 	}
 	to{
 		width: 100%;
