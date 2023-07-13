@@ -374,11 +374,12 @@ canvas{
     display:block;
     border: 0;
     cursor: pointer;
+    padding: 0;
 }
 
 .hero-slider-dots .slick-active button{
     background-color: #600624;
-    animation: dots_anim 4s linear;
+    animation: dots_anim 5.5s linear;
 }
 
 @keyframes dots_anim {
