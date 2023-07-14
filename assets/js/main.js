@@ -386,7 +386,7 @@ function draw(canvas, color) {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     //波を描画 drawWave(canvas, color[数字（波の数を0から数えて指定）], 透過, 波の幅のzoom,波の開始位置の遅れ )
-    drawWave(canvas, color[0], 1, 3, 0);//drawWave(canvas, color[0],0.5, 3, 0);とすると透過50%の波が出来る
+    drawWave(canvas, color[0], 1, 10, 0);//drawWave(canvas, color[0],0.5, 3, 0);とすると透過50%の波が出来る
 }
 
 /**
@@ -398,7 +398,7 @@ function drawWave(canvas, color, alpha, zoom, delay) {
     context.fillStyle = color;//塗りの色
     context.globalAlpha = alpha;
     context.beginPath(); //パスの開始
-    drawSine(canvas, info.t / 1.0, zoom, delay);
+    drawSine(canvas, info.t / 2.0, zoom, delay);
     context.lineTo(canvas.width + 10, canvas.height); //パスをCanvasの右下へ
     context.lineTo(0, canvas.height); //パスをCanvasの左下へ
     context.closePath() //パスを閉じる
